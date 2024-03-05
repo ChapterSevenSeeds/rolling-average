@@ -1,3 +1,6 @@
+## [1.1.4] - 3/4/2024
+- Added type declarations back.
+
 ## [1.1.3] - 3/4/2024
 - Removed webpack.config.js from the published package.
 
