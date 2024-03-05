@@ -14,6 +14,7 @@
         "transform": "typia/lib/transform"
       }
     ],
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "declaration": true
   }
 }
