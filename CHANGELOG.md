@@ -1,3 +1,6 @@
+## [1.1.5] - 3/4/2024
+- Removed redundant file.
+
 ## [1.1.4] - 3/4/2024
 - Added type declarations back.
 
