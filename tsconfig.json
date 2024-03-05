@@ -1,6 +1,8 @@
 {
   "compilerOptions": {
-    "target": "es2016",
+    "target": "ESNext",
+    "module": "ESNext",
+    "lib": ["ESNext", "DOM"],
     "esModuleInterop": true,
     "sourceMap": false,
     "rootDir": "src",
@@ -9,7 +11,5 @@
     "strict": true,
     "skipLibCheck": true,
     "strictNullChecks": true,
-    "declaration": true,
-    "moduleResolution": "node",
   }
 }

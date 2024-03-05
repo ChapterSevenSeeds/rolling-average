@@ -1,3 +1,6 @@
+## [1.1.2] - 3/4/2024
+- I got the build process to produce workable CJS and ESM exports.
+
 ## [1.1.1] - 3/4/2024
 - More pain.
 
