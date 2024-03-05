@@ -1,3 +1,6 @@
+## [1.0.6] - 3/4/2024
+- Removed package.json from npmignore.
+
 ## [1.0.5] - 3/4/2024
 - Fixed both targets.
 
