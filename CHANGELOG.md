@@ -1,3 +1,6 @@
+## [1.0.8] - 3/4/2024
+- Package.json pain.
+
 ## [1.0.7] - 3/4/2024
 - Fixed package.json weirdness.
 
