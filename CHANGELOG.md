@@ -1,3 +1,6 @@
+## [1.0.5] - 3/4/2024
+- Fixed both targets.
+
 ## [1.0.4] - 3/4/2024
 - Changed to ESM module.
 

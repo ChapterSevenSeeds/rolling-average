@@ -1,17 +1,22 @@
 {
   "name": "rolling-average",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "author": "Tyson Jones",
   "description": "A simple rolling average calculator",
-  "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/ChapterSevenSeeds/rolling-average"
   },
   "license": "ISC",
-  "main": "dist-commonjs/index.js",
-  "module": "dist-esm/index.js",
-  "types": "dist-esm/index.d.ts",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
+    }
+  },
   "keywords": [
     "rolling",
     "average",
@@ -30,10 +35,8 @@
   },
   "scripts": {
     "test": "jest",
-    "build-commonjs": "tsc --module commonjs --outDir dist-commonjs",
-    "build-esm": "tsc --module esnext --outDir dist-esm",
-    "build": "pnpm build-commonjs && pnpm build-esm",
-    "clean": "rimraf dist-commonjs && rimraf dist-esm",
+    "build": "tsc --module esnext --outDir dist/esm && tsc --module commonjs --outDir dist/cjs && node package-fixup.js",
+    "clean": "rimraf dist",
     "publish-package": "pnpm rebuild && pnpm test && pnpm publish",
     "rebuild": "pnpm clean && pnpm build"
   }
