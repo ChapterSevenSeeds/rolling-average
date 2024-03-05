@@ -1,14 +1,15 @@
 {
   "compilerOptions": {
     "target": "es2016",
-    "module": "ESNext",
     "esModuleInterop": true,
     "sourceMap": false,
     "rootDir": "src",
     "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
     "strict": true,
     "skipLibCheck": true,
     "strictNullChecks": true,
-    "declaration": true
+    "declaration": true,
+    "moduleResolution": "node",
   }
 }

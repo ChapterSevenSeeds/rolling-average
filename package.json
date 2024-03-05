@@ -1,6 +1,6 @@
 {
   "name": "rolling-average",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "author": "Tyson Jones",
   "description": "A simple rolling average calculator",
   "repository": {
@@ -12,8 +12,8 @@
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
   "exports": {
-    "import": "./dist/esm/index.js",
-    "require": "./dist/cjs/index.js"
+    "./module": "./dist/esm/index.js",
+    ".": "./dist/cjs/index.js"
   },
   "keywords": [
     "rolling",
