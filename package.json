@@ -40,7 +40,7 @@
     "test": "jest",
     "build": "webpack --mode=production --progress && node package-fixup.js",
     "clean": "rimraf dist",
-    "publish-package": "pnpm rebuild && pnpm test && pnpm publish",
+    "publish-package": "pnpm test && pnpm run rebuild && pnpm publish",
     "rebuild": "pnpm clean && pnpm build"
   }
 }
