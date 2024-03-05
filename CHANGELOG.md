@@ -1,3 +1,6 @@
+## [1.0.3] - 3/4/2024
+- Added CommonJS and ESM targets.
+
 ## [1.0.2] - 3/4/2024
 - Fixed exports.
 
