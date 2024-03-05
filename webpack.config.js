@@ -24,10 +24,7 @@ const base = {
     },
     experiments: {
         outputModule: true,
-    },
-    optimization: {
-        minimize: false
-    },
+    }
 };
 
 /**
