@@ -3,7 +3,6 @@
   "version": "1.0.3",
   "author": "Tyson Jones",
   "description": "A simple rolling average calculator",
-  "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/ChapterSevenSeeds/rolling-average"
