@@ -1,3 +1,6 @@
+## [1.0.4] - 3/4/2024
+- Changed to ESM module.
+
 ## [1.0.3] - 3/4/2024
 - Added CommonJS and ESM targets.
 
