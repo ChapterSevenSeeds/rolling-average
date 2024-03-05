@@ -1,3 +1,6 @@
+## [1.0.7] - 3/4/2024
+- Fixed package.json weirdness.
+
 ## [1.0.6] - 3/4/2024
 - Removed package.json from npmignore.
 
