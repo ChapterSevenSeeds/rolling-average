@@ -1,6 +1,6 @@
 {
   "name": "rolling-average",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": "Tyson Jones",
   "description": "A simple rolling average calculator",
   "repository": {
@@ -8,9 +8,9 @@
     "url": "https://github.com/ChapterSevenSeeds/rolling-average"
   },
   "license": "ISC",
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
-  "types": "dist/esm/index.d.ts",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
   "exports": {
     "module": "./dist/esm/index.js",
     "require": "./dist/cjs/index.js"
