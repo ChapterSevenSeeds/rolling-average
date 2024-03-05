@@ -1,3 +1,3 @@
-export * from "./RollingAverage/RollingAverageFactory";
-export * from "./RollingAverage/FixedWindowRollingAverage";
-export * from "./RollingAverage/TimeWindowRollingAverage";
+export { default as RollingAverageFactory } from "./RollingAverage/RollingAverageFactory";
+export { default as FixedWindowRollingAverage } from "./RollingAverage/FixedWindowRollingAverage";
+export { default as TimeWindowRollingAverage } from "./RollingAverage/TimeWindowRollingAverage";
