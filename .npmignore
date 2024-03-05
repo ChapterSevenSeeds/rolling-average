@@ -4,3 +4,4 @@ jest.config.js
 tsconfig.json
 dist/tests
 package-fixup.js
+webpack.config.js
