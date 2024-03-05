@@ -1,6 +1,6 @@
 {
   "name": "rolling-average",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "author": "Tyson Jones",
   "description": "A simple rolling average calculator",
   "repository": {
@@ -8,7 +8,7 @@
     "url": "https://github.com/ChapterSevenSeeds/rolling-average"
   },
   "license": "ISC",
-  "types": "./dist/types.d.ts",
+  "types": "./dist/types/index.d.ts",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "exports": {
@@ -39,7 +39,7 @@
   "scripts": {
     "test": "jest",
     "build": "webpack --mode=production --progress && node package-fixup.js && pnpm run types",
-    "types": "tsc --emitDeclarationOnly --declaration --outFile dist/types.js",
+    "types": "tsc --emitDeclarationOnly --declaration --outDir dist/types",
     "clean": "rimraf dist",
     "publish-package": "pnpm test && pnpm run rebuild && pnpm publish",
     "rebuild": "pnpm clean && pnpm build"

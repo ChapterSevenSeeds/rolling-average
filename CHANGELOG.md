@@ -1,3 +1,6 @@
+## [1.1.6] - 3/4/2024
+- Fixed types again.
+
 ## [1.1.5] - 3/4/2024
 - Removed redundant file.
 
