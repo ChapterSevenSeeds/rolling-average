@@ -1,5 +1,3 @@
-import { assertGuardEquals, tags } from "typia";
-
 export default class Queue<T> {
     private _head: number = 0;
     private _tail: number = 0;
@@ -15,7 +13,9 @@ export default class Queue<T> {
     }
 
     public constructor(initialLength: number = 10) {
-        assertGuardEquals<number & tags.Minimum<1> & tags.Type<"uint32">>(initialLength);
+        if (initialLength < 1) {
+            throw new Error("initialLength must be at least 1");
+        }
         this._data = new Array<T>(initialLength);
     }
 

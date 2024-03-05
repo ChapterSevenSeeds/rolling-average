@@ -1,6 +1,5 @@
 import AverageCalculator from "./AverageCalculator";
 import Queue from "../utils/Queue";
-import { assertGuardEquals, tags } from "typia";
 
 export default class TimeWindowRollingAverage extends AverageCalculator {
     private windowDuration: number;
@@ -8,15 +7,15 @@ export default class TimeWindowRollingAverage extends AverageCalculator {
     private sum: number = 0;
 
     public constructor(windowDuration: number) {
-        assertGuardEquals<number & tags.Minimum<1> & tags.Type<"uint32">>(windowDuration);
+        if (windowDuration < 1) {
+            throw new Error("windowDuration must be at least 1");
+        }
 
         super();
         this.windowDuration = windowDuration;
     }
 
     public addSample(sample: number): void {
-        assertGuardEquals<number>(sample);
-
         this.samples.enqueue({ time: Date.now(), value: sample });
         this.sum += sample;
     }

@@ -1,6 +1,6 @@
 {
   "name": "rolling-average",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Tyson Jones",
   "description": "A simple rolling average calculator",
   "repository": {
@@ -23,14 +23,12 @@
     "ts-jest": "^29.1.2",
     "ts-node": "^10.9.2",
     "ts-patch": "^3.1.2",
-    "typescript": "^5.3.2",
-    "typia": "^5.4.14"
+    "typescript": "^5.3.2"
   },
   "scripts": {
-    "prepare": "ts-patch install && typia patch",
     "test": "jest",
     "build": "tsc",
     "clean": "rimraf dist",
-    "publish": "pnpm clean && pnpm build && pnpm test && pnpm publish"
+    "publish-package": "pnpm clean && pnpm build && pnpm test && pnpm publish"
   }
 }
