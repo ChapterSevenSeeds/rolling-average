@@ -1,3 +1,6 @@
+## [1.1.7] - 3/4/2024
+- Updated readme.
+
 ## [1.1.6] - 3/4/2024
 - Fixed types again.
 

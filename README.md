@@ -36,9 +36,9 @@ console.log(fixedWindow.getAverage()); // Prints out 3
 ### 3. Regular - Calculates the average of all samples.
 ```ts
 import { RollingAverageFactory } from "rolling-average";
-const fixedWindow = RollingAverageFactory.fixedWindow(3);
-fixedWindow.addSample(1);
-fixedWindow.addSample(2);
-fixedWindow.addSample(3);
-console.log(fixedWindow.getAverage()); // Prints out 2
+const regular = RollingAverageFactory.regular(3);
+regular.addSample(1);
+regular.addSample(2);
+regular.addSample(3);
+console.log(regular.getAverage()); // Prints out 2
 ```
