@@ -100,6 +100,19 @@ describe("Queue tests", () => {
         expect(queue.length).toBe(0);
     });
 
+    it("stress test", () => {
+        const queue = new Queue<number>(3);
+        let expectedNumbers: number[] = [];
+        for (let i = 0; i < 1000; i++) {
+            const number = Math.floor(Math.random() * 1000);
+            queue.enqueue(number);
+            expectedNumbers.push(number);
+        }
+        for (let i = 0; i < 1000; i++) {
+            expect(queue.dequeue()).toBe(expectedNumbers[i]);
+        }
+    });
+
     it("should throw when peeking an empty queue", () => {
         const queue = new Queue<number>();
         expect(() => queue.peekFront()).toThrow("Queue is empty");
