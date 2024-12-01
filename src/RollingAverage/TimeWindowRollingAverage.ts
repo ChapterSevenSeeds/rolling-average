@@ -22,10 +22,10 @@ export default class TimeWindowRollingAverage extends AverageCalculator {
 
     public getAverage(): number {
         const now = Date.now();
-        while (now - this.samples.peekFront().time >= this.windowDuration) {
+        while (this.samples.length > 0 && now - this.samples.peekFront().time >= this.windowDuration) {
             this.sum -= this.samples.dequeue().value;
         }
 
-        return this.sum / this.samples.length;
+        return this.samples.length === 0 ? 0 : this.sum / this.samples.length;
     }
 }

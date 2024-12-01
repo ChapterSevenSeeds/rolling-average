@@ -1,3 +1,8 @@
+## [1.1.8] - 12/1/2024
+- Added benchmarking.
+- Fixed a bug in the Time Window rolling average calculator where getting the average when no samples are in the queue would throw an exception.
+- Cleaned up some unnecessary things in the package bundle.
+
 ## [1.1.7] - 3/4/2024
 - Updated readme.
 

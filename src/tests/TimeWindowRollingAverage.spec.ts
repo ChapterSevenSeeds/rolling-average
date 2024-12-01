@@ -29,4 +29,9 @@ describe("TimeWindowRollingAverage tests", () => {
         await asyncSetTimeout(200);
         expect(average.getAverage()).toBe(3.5);
     });
+
+    it("should not throw when getting the average with no samples", async () => {
+        const average = new TimeWindowRollingAverage(1000);
+        expect(() => average.getAverage()).not.toThrow();
+    });
 });

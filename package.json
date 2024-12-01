@@ -1,6 +1,6 @@
 {
   "name": "rolling-average",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "author": "Tyson Jones",
   "description": "A simple rolling average calculator",
   "repository": {
@@ -8,7 +8,7 @@
     "url": "https://github.com/ChapterSevenSeeds/rolling-average"
   },
   "license": "ISC",
-  "types": "./dist/types/index.d.ts",
+  "types": "./dist/cjs/index.d.ts",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "exports": {
@@ -26,22 +26,36 @@
   "homepage": "https://github.com/ChapterSevenSeeds/rolling-average",
   "devDependencies": {
     "@types/jest": "^29.5.12",
+    "@types/lodash": "^4.17.13",
+    "chalk": "^5.3.0",
     "jest": "^29.7.0",
+    "js-sizeof": "^0.0.1",
+    "lodash": "^4.17.21",
+    "pretty-bytes": "^6.1.1",
+    "pretty-ms": "^9.2.0",
     "rimraf": "^5.0.5",
     "ts-jest": "^29.1.2",
     "ts-loader": "^9.5.1",
     "ts-node": "^10.9.2",
     "ts-patch": "^3.1.2",
+    "tsx": "^4.19.2",
     "typescript": "^5.3.2",
     "webpack": "^5.90.3",
-    "webpack-cli": "^5.1.4"
+    "webpack-cli": "^5.1.4",
+    "yocto-queue": "^1.1.1"
   },
   "scripts": {
     "test": "jest",
     "build": "webpack --mode=production --progress && node package-fixup.js && pnpm run types",
-    "types": "tsc --emitDeclarationOnly --declaration --outDir dist/types",
+    "types": "tsc --emitDeclarationOnly --declaration --outDir dist/cjs && tsc --emitDeclarationOnly --declaration --outDir dist/esm",
     "clean": "rimraf dist",
     "publish-package": "pnpm test && pnpm run rebuild && pnpm publish",
-    "rebuild": "pnpm clean && pnpm build"
+    "rebuild": "pnpm clean && pnpm build",
+    "bench": "tsx src/bench/bench.ts"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "yocto-queue@1.1.1": "patches/yocto-queue@1.1.1.patch"
+    }
   }
 }
