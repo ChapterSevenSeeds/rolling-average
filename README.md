@@ -42,3 +42,9 @@ regular.addSample(2);
 regular.addSample(3);
 console.log(regular.getAverage()); // Prints out 2
 ```
+
+## Benchmarks
+Benchmarks are found in the `src/bench` folder. You can run them via `pnpm run bench`. The following are the results when run from my machine.  
+Please note that, in order to measure memory usage by `yocto-queue`, I had to patch the package to remove the JavaScript private field identifier (`#`).
+
+![alt text](benchmark_screenshot.png)
